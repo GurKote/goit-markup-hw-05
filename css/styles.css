@@ -544,6 +544,31 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-list-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  overflow: auto;
+  border-radius: 0px;
+  transform: translate(0, 100%);
+  transition: transform var(--transition-timing-func);
+
+  color: var(--light-color);
+  background-color: var(--primary-brand-color);
+  padding: 40px 32px;
+}
+
+.portfolio-list-link:is(:hover, :focus) .overlay {
+  transform: translate(0, 0);
+}
+
 .portfolio-list-text {
   padding: 32px 16px;
   border: 1px solid var(--accent-color);
